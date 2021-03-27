@@ -93,7 +93,7 @@ class SetDefaultCoinButton extends React.Component {
             },
             body: JSON.stringify({ "PreferredCoin": this.state.selectedCoinSymbol })
         };
-        fetch("https://localhost:5001/api/CointreeAPICall/SetUserPreferences", requestOptions)
+        fetch("https://codechallengeserver.azurewebsites.net/api/CointreeAPICall/SetUserPreferences", requestOptions)
             .then(response => response.json())
             .then(data => updatePreferredCoinSymbol(data));
     };
@@ -166,7 +166,7 @@ class UpdatePriceDetailsButton extends React.Component {
     }
 
     GetPriceDetails = (e) => {
-        fetch("https://localhost:5001/api/CointreeAPICall/EnquireCoinPriceDetails",
+        fetch("https://codechallengeserver.azurewebsites.net/api/CointreeAPICall/EnquireCoinPriceDetails",
             {
                 mode: "cors",
                 headers: { "Access-Control-Allow-Origin": "*" }
@@ -195,7 +195,7 @@ class SetDefaultCoin extends React.Component {
     }
 
     componentDidMount() {
-        fetch("https://localhost:5001/api/CointreeAPICall/GetAllCoins",
+        fetch("https://codechallengeserver.azurewebsites.net/api/CointreeAPICall/GetAllCoins",
             {
                 mode: "cors",
                 headers: { "Access-Control-Allow-Origin": "*" }
