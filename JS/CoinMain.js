@@ -100,7 +100,7 @@ class SetDefaultCoinButton extends React.Component {
 
     render() {
         return (
-            <button onClick={this.SendDefaultCoin}>Set Default Coin</button>
+            <button onClick={this.SendDefaultCoin}>Set Preferred Coin</button>
         );
     }
 }
